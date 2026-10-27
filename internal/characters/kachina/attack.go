@@ -34,11 +34,9 @@ func init() {
 	attackFrames[2][action.ActionCharge] = 45
 	attackFrames[3] = frames.InitNormalCancelSlice(16, 51)
 	attackFrames[3][action.ActionAttack] = 51
-	attackFrames[3][action.ActionCharge] = 500
 
 	chargeFrames = frames.InitAbilSlice(55)
 	chargeFrames[action.ActionAttack] = 50
-	chargeFrames[action.ActionCharge] = 500
 	chargeFrames[action.ActionSkill] = 50
 	chargeFrames[action.ActionBurst] = 50
 	chargeFrames[action.ActionDash] = 50
