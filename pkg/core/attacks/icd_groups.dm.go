@@ -48,6 +48,7 @@ const (
 	ICDGroupLanyanRingAttack
 	ICDGroupLanyanRingAttackMix
 	ICDGroupLayla
+	ICDGroupLohenNormalAttack
 	ICDGroupLyneyExtra
 	ICDGroupMizukiSkill
 	ICDGroupNahidaSkill
@@ -116,6 +117,7 @@ var ICDGroupResetTimer = []int{
 	ICDGroupLanyanRingAttack:          150,  // 2.5s
 	ICDGroupLanyanRingAttackMix:       150,  // 2.5s
 	ICDGroupLayla:                     180,  // 3s
+	ICDGroupLohenNormalAttack:         300,  // 5s
 	ICDGroupLyneyExtra:                60,   // 1s
 	ICDGroupMizukiSkill:               72,   // 1.2s
 	ICDGroupNahidaSkill:               60,   // 1s
@@ -184,6 +186,7 @@ var ICDGroupEleApplicationSequence = [][]float64{
 	ICDGroupLanyanRingAttack:          {1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0},
 	ICDGroupLanyanRingAttackMix:       {1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0},
 	ICDGroupLayla:                     {1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0},
+	ICDGroupLohenNormalAttack:         {1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0},
 	ICDGroupLyneyExtra:                {1.0, 0.0, 0.0, 0.0, 0.0, 0.0},
 	ICDGroupMizukiSkill:               {1.0, 0.0, 0.0, 0.0},
 	ICDGroupNahidaSkill:               {1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
@@ -252,6 +255,7 @@ var ICDGroupDamageSequence = [][]float64{
 	ICDGroupLanyanRingAttack:          {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0},
 	ICDGroupLanyanRingAttackMix:       {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0},
 	ICDGroupLayla:                     {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0},
+	ICDGroupLohenNormalAttack:         {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0},
 	ICDGroupLyneyExtra:                {1.0, 1.0, 1.0, 1.0, 1.0, 1.0},
 	ICDGroupMizukiSkill:               {1.0, 1.0, 1.0, 1.0},
 	ICDGroupNahidaSkill:               {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0},

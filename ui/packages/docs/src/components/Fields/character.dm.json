@@ -163,6 +163,24 @@
       "desc": "The direction of the Blind Spot relatively to Kinich. -1 - in clock-wise direction; 1 - in counter clock-wise direction; 0 - does not exist at the moment."
     }
   ],
+  "lohen": [
+    {
+      "field": ".lohen.etched",
+      "desc": "Number of Etched Into Bone and Soul used in the current Masterstroke."
+    },
+    {
+      "field": ".lohen.joy",
+      "desc": "Current Joy (0-100). The skill becomes Etched Into Bone and Soul at 100."
+    },
+    {
+      "field": ".lohen.masterstroke",
+      "desc": "1 while Masterstroke mode is active, 0 otherwise."
+    },
+    {
+      "field": ".lohen.will",
+      "desc": "Current Will to Win."
+    }
+  ],
   "luminecryo": [
     {
       "field": ".luminecryo.frostglow",

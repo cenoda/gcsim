@@ -1,0 +1,55 @@
+use: pipeline
+kind: character
+name: lohen
+
+override:
+  icd_group:
+    LohenNormalAttack:
+      name: Lohen_ElementalArt
+
+combat:
+  icd_groups:
+    - LohenNormalAttack
+
+talents:
+  - attack:
+      - - attack(1-Hit DMG)
+      - - attack(2-Hit DMG)
+      - - attack(3-Hit DMG) # {}×3
+        - attack(3-Hit DMG) # {}×3
+        - attack(3-Hit DMG) # {}×3
+      - - attack(4-Hit DMG)
+      - - attack(5-Hit DMG) # {}+{}
+        - attack(5-Hit DMG|1) # {}+{}
+  - charge: attack(Charged Attack DMG) # {}×2
+
+  - skillAttack:
+      - - skill(1-Hit DMG)
+      - - skill(2-Hit DMG)
+      - - skill(3-Hit DMG) # {}×3
+        - skill(3-Hit DMG) # {}×3
+        - skill(3-Hit DMG) # {}×3
+      - - skill(4-Hit DMG)
+      - - skill(5-Hit DMG) # {}+{}
+        - skill(5-Hit DMG|1) # {}+{}
+  - skillCharge: skill(Charged Attack DMG) # {}×2
+  - skillDuration: skill(Masterstroke)
+  - skillEtched: skill(Etched Into Bone and Soul DMG) # {}×4
+  - skillWill: skill(DMG Increase From Will to Win)
+
+  - burst: burst(Skill DMG) # {}×6
+  - burstWill: burst(DMG Increase From Will to Win)
+
+docs:
+  fields:
+    .lohen.masterstroke: 1 while Masterstroke mode is active, 0 otherwise.
+    .lohen.joy: Current Joy (0-100). The skill becomes Etched Into Bone and Soul at 100.
+    .lohen.will: Current Will to Win.
+    .lohen.etched: Number of Etched Into Bone and Soul used in the current Masterstroke.
+  # frames: no community frame count exists yet (KQM quick guide and TCL page have
+  # none), so there is no count/video entry. Every frame value is estimated; the
+  # source of each action's numbers is commented in attack.go, charge.go, skill.go
+  # and burst.go. Calibration: the N1 -> charged attack loop (43 frames) lets a 13 s
+  # Masterstroke fit 15-16 N1C after the skill, and 17 only with near frame-perfect
+  # input, as the KQM Lohen quick guide reports. Hit lag, ICD, hit counts and the
+  # burst's hit spacing come from the game's ability data.
