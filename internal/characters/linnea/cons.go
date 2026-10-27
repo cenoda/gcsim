@@ -114,7 +114,7 @@ func (c *char) c2Init() {
 			case attributes.Geo:
 			case attributes.Hydro:
 			default:
-				return
+				continue
 			}
 			char.AddStatMod(character.StatMod{
 				Base:         modifier.NewBaseWithHitlag(c2Key, 8*60),
