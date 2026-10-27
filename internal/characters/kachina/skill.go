@@ -95,7 +95,7 @@ func (c *char) queueIndependent(src, delay int) {
 			c.twirlyParticleCB,
 			func(info.AttackCB) { c.consumeTwirlyPoints(10) },
 		)
-		c.QueueCharTask(func() { c.queueIndependent(src, 118) }, 118)
+		c.queueIndependent(src, 118)
 	}, delay)
 }
 
