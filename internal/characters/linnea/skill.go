@@ -45,7 +45,7 @@ const (
 )
 
 func init() {
-	skillFrames = frames.InitAbilSlice(14) // ?
+	skillFrames = frames.InitAbilSlice(44) // longest cancel (ActionAim)
 	skillFrames[action.ActionAttack] = 33
 	skillFrames[action.ActionAim] = 44
 	skillFrames[action.ActionSkill] = 20
