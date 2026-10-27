@@ -1,0 +1,58 @@
+use: pipeline
+kind: character
+name: vesna
+
+override:
+  icd_group:
+    VesnaMagicSword:
+      name: Vesna_MagicSword
+
+combat:
+  icd_tags:
+    - VesnaMagicSword
+  icd_groups:
+    - VesnaMagicSword
+
+talents:
+  - attack:
+      - attack(1-Hit DMG)
+      - attack(2-Hit DMG)
+      - - attack(3-Hit DMG)
+        - attack(3-Hit DMG)
+      - attack(4-Hit DMG)
+      - attack(5-Hit DMG)
+      - attack(6-Hit DMG)
+  - charge: attack(Charged Attack DMG)
+  - collision: attack(Plunge DMG)
+  - lowPlunge: attack(Low/High Plunge DMG)
+  - highPlunge: attack(Low/High Plunge DMG|1)
+
+  - skill: skill(Skill DMG)
+  - windborne1: skill(Windborne Sword Lv. 1 DMG)
+  - windborne2: skill(Windborne Sword Lv. 2 DMG)
+  - blade2: skill(Windborne Sword Lv. 2 Spirit Blade DMG)
+  - blade2SSw: skill(Windborne Sword Lv. 2 Spirit Blade Stellar Swirl DMG)
+  - blade3: skill(Windborne Sword Lv. 3 Spirit Blade DMG)
+  - blade3SSw: skill(Windborne Sword Lv. 3 Spirit Blade Stellar Swirl DMG)
+  - blade3Final: skill(Windborne Sword Lv. 3 Spirit Blade Final Hit DMG)
+  - blade3FinalSSw: skill(Windborne Sword Lv. 3 Spirit Blade Final Hit Stellar Swirl DMG)
+  - pinion: skill(Wind Pinion DMG)
+  - armedDur: skill(Armed for Action Duration)
+
+  - burst: burst(Spirit Blade DMG)
+  - burstSSw: burst(Spirit Blade Stellar Swirl DMG)
+
+docs:
+  fields:
+    .vesna.armed: 1 while Armed for Action is active, 0 otherwise.
+    .vesna.essence: Sword Essence (0 to 90; one Windborne Sword costs 30).
+    .vesna.windborne-level: Level of the next Windborne Sword (1 to 3) during Armed for Action, 0 otherwise.
+    .vesna.lv3-count: Lv. 3 Windborne Swords used in the current or last Armed for Action.
+    .vesna.disciplinary-action: Disciplinary Action stacks (A1).
+    .vesna.radiance: 1 while Vesna is in Radiance - Stellar Swirl, 0 otherwise.
+  # frames: no community frame count exists yet, so there is no count/video entry. Every animation
+  # length and cancel is estimated. From the game's ability data, not estimated: the skill's hit at
+  # the press, Lv. 1 at 20% and Lv. 2 at 35% of their animations, the Lv. 2 Spirit Blade 0.5s after
+  # its gadget appears, the burst's Spirit Blade 0.55s after the press, the Vesna_MagicSword ICD
+  # group, gauges, hit lag and hitboxes (Avatar_Vesna_*, SkillObj_Vesna_*,
+  # Avatar_Girl_Sword_Vesna_AniEvent_Attack).

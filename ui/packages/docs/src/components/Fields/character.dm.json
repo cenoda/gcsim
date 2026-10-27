@@ -309,6 +309,32 @@
       "desc": "Number of Void Rifts on the field."
     }
   ],
+  "vesna": [
+    {
+      "field": ".vesna.armed",
+      "desc": "1 while Armed for Action is active, 0 otherwise."
+    },
+    {
+      "field": ".vesna.disciplinary-action",
+      "desc": "Disciplinary Action stacks (A1)."
+    },
+    {
+      "field": ".vesna.essence",
+      "desc": "Sword Essence (0 to 90; one Windborne Sword costs 30)."
+    },
+    {
+      "field": ".vesna.lv3-count",
+      "desc": "Lv. 3 Windborne Swords used in the current or last Armed for Action."
+    },
+    {
+      "field": ".vesna.radiance",
+      "desc": "1 while Vesna is in Radiance - Stellar Swirl, 0 otherwise."
+    },
+    {
+      "field": ".vesna.windborne-level",
+      "desc": "Level of the next Windborne Sword (1 to 3) during Armed for Action, 0 otherwise."
+    }
+  ],
   "vodyanitsa": [
     {
       "field": ".vodyanitsa.chorus",

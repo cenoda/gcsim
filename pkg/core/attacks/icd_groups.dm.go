@@ -64,6 +64,7 @@ const (
 	ICDGroupTravelerCryoIcicle
 	ICDGroupTravelerDewdrop
 	ICDGroupVenti
+	ICDGroupVesnaMagicSword
 	ICDGroupWandererA4
 	ICDGroupWandererC6
 	ICDGroupXiaoDash
@@ -134,6 +135,7 @@ var ICDGroupResetTimer = []int{
 	ICDGroupTravelerCryoIcicle:        150,  // 2.5s
 	ICDGroupTravelerDewdrop:           90,   // 1.5s
 	ICDGroupVenti:                     60,   // 1s
+	ICDGroupVesnaMagicSword:           120,  // 2s
 	ICDGroupWandererA4:                60,   // 1s
 	ICDGroupWandererC6:                120,  // 2s
 	ICDGroupXiaoDash:                  6,    // 0.1s
@@ -204,6 +206,7 @@ var ICDGroupEleApplicationSequence = [][]float64{
 	ICDGroupTravelerCryoIcicle:        {1.0, 0.0, 0.0, 0.0},
 	ICDGroupTravelerDewdrop:           {1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
 	ICDGroupVenti:                     {1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0},
+	ICDGroupVesnaMagicSword:           {1.0, 0.0},
 	ICDGroupWandererA4:                {1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
 	ICDGroupWandererC6:                {1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
 	ICDGroupXiaoDash:                  {1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
@@ -274,6 +277,7 @@ var ICDGroupDamageSequence = [][]float64{
 	ICDGroupTravelerCryoIcicle:        {1.0, 1.0, 1.0, 1.0},
 	ICDGroupTravelerDewdrop:           {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0},
 	ICDGroupVenti:                     {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0},
+	ICDGroupVesnaMagicSword:           {1.0, 1.0, 1.0, 1.0, 1.0},
 	ICDGroupWandererA4:                {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0},
 	ICDGroupWandererC6:                {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0},
 	ICDGroupXiaoDash:                  {1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0},

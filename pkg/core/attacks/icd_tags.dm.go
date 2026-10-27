@@ -90,6 +90,7 @@ const (
 	ICDTagVarkaExtraAttackWind
 	ICDTagVarkaNormalAttackElem
 	ICDTagVarkaNormalAttackWind
+	ICDTagVesnaMagicSword
 	ICDTagWandererA4
 	ICDTagWandererC6
 	ICDTagXilonenSkate
