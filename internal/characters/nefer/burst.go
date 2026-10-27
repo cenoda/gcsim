@@ -48,7 +48,7 @@ func (c *char) Burst(p map[string]int) (action.Info, error) {
 		m := make([]float64, attributes.EndStatType)
 		m[attributes.DmgP] = bonus
 		c.AddAttackMod(character.AttackMod{
-			Base: modifier.NewBase(neferBurstBonusKey, 90),
+			Base: modifier.NewBase(neferBurstBonusKey, 150), // covers both hits (104, 149)
 			Amount: func(atk *info.AttackEvent, t info.Target) []float64 {
 				if atk.Info.Abil != "Sacred Vow: True Eye's Phantasm (Hit 1)" && atk.Info.Abil != "Sacred Vow: True Eye's Phantasm (Hit 2)" {
 					return nil
