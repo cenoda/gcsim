@@ -143,6 +143,7 @@ const (
 	RaidenShogun                  // raidenshogun
 	Razor                         // razor
 	Rosaria                       // rosaria
+	Sandrone                      // sandrone
 	SangonomiyaKokomi             // sangonomiyakokomi
 	Sayu                          // sayu
 	Sethos                        // sethos
@@ -279,6 +280,7 @@ var _CharNames = [...]string{
 	"raidenshogun",
 	"razor",
 	"rosaria",
+	"sandrone",
 	"sangonomiyakokomi",
 	"sayu",
 	"sethos",
@@ -415,6 +417,7 @@ var _CharValues = [...]Char{
 	RaidenShogun,
 	Razor,
 	Rosaria,
+	Sandrone,
 	SangonomiyaKokomi,
 	Sayu,
 	Sethos,

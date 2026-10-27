@@ -271,6 +271,20 @@
       "desc": "Current number of A1 stacks on Odette"
     }
   ],
+  "sandrone": [
+    {
+      "field": ".sandrone.overdrive",
+      "desc": "1 while Fagio is in Power Overdrive mode, 0 otherwise."
+    },
+    {
+      "field": ".sandrone.power",
+      "desc": "Fagio's current Decoding Power (0-100)."
+    },
+    {
+      "field": ".sandrone.tactics",
+      "desc": "Current Refined Tactics stacks (0-10)."
+    }
+  ],
   "shikanoinheizou": [
     {
       "field": ".heizou.declension",

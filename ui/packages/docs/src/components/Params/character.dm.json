@@ -1760,6 +1760,13 @@
       "desc": "Default 0. 1 for disabling striking behind for A1 purposes."
     }
   ],
+  "sandrone": [
+    {
+      "ability": "charge",
+      "param": "hold",
+      "desc": "Frames Fagio fires after the charged attack's entry (0-720). Default: until Fagio enters Power Overdrive (3 condensed beams at C0 and 6 at C1 from 0 Decoding Power), or 48 frames (2 Power Overdrive shots) if it already is in Power Overdrive."
+    }
+  ],
   "sangonomiyakokomi": [
     {
       "ability": "attack",

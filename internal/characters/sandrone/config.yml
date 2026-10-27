@@ -1,0 +1,54 @@
+use: pipeline
+kind: character
+name: sandrone
+
+override:
+  icd_group:
+    SandroneMachineGun:
+      name: Avatar_Marionette_MachineGun
+
+combat:
+  icd_tags:
+    - SandroneMachineGun
+  icd_groups:
+    - SandroneMachineGun
+
+talents:
+  - attack:
+      - attack(1-Hit DMG)
+      - attack(2-Hit DMG)
+      - attack(3-Hit DMG)
+  - sweep: attack(Charged Attack Sweeping Fire DMG)
+  - beam: attack(Charged Attack Condensed Beam DMG)
+  - beamSSC: attack(Charged Attack Condensed Beam Stellar-Conduct DMG)
+  - beamSSw: attack(Charged Attack Condensed Beam Stellar Swirl DMG)
+  - overdrive: attack(DMG When in Power Overdrive)
+
+  - prism: skill(Prism Shot DMG)
+  - prismSSC: skill(Prism Shot Stellar-Conduct DMG)
+  - prismSSw: skill(Prism Shot Stellar Swirl DMG)
+
+  - bombard: burst(Bombardment DMG) # {}×3
+  - ray: burst(Convective Inhibition Ray DMG)
+  - raySSC: burst(Convective Inhibition Ray Stellar-Conduct DMG)
+  - raySSw: burst(Convective Inhibition Ray Stellar Swirl DMG)
+
+docs:
+  fields:
+    .sandrone.power: Fagio's current Decoding Power (0-100).
+    .sandrone.overdrive: 1 while Fagio is in Power Overdrive mode, 0 otherwise.
+    .sandrone.tactics: Current Refined Tactics stacks (0-10).
+  # frames: no community frame count exists yet (KQM quick guide and the KQM library page
+  # have none), so there is no count/video entry. Every frame value is estimated; the source
+  # of each action's numbers is commented in attack.go, charge.go, skill.go and burst.go.
+  # Calibration: the charged attack's entry and release and the skill's earliest cancel add
+  # about 1s to each C E pair, so that 3[C E] at C0 (3 condensed beams per C) and 2[C E] at C1
+  # (6 beams per C) fill the 10-13s of field time the KQM Sandrone quick guide reports.
+  # Fagio's timings (Decoding Power rates, beam, sweeping fire and Power Overdrive shot
+  # intervals, Prism Shot and burst hit timings), ICD and gauges come from the game's ability
+  # and gadget data.
+
+abilities:
+  - name: charge
+    params:
+      hold: 'Frames Fagio fires after the charged attack''s entry (0-720). Default: until Fagio enters Power Overdrive (3 condensed beams at C0 and 6 at C1 from 0 Decoding Power), or 48 frames (2 Power Overdrive shots) if it already is in Power Overdrive.'

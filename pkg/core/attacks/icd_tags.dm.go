@@ -69,6 +69,7 @@ const (
 	ICDTagOroronElmentalBurst
 	ICDTagOverloadDamage
 	ICDTagQiqiElementalArt
+	ICDTagSandroneMachineGun
 	ICDTagShatter
 	ICDTagSkirkCons
 	ICDTagSuperconductDamage
