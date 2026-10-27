@@ -16,7 +16,7 @@ var (
 )
 
 func init() {
-	skillFrames = frames.InitAbilSlice(733)
+	skillFrames = frames.InitAbilSlice(57) // longest counted cancel (ActionJump); Turbo Twirly runs on by itself
 	skillFrames[action.ActionAttack] = 56
 	skillFrames[action.ActionBurst] = 30
 	skillFrames[action.ActionSkill] = 51
