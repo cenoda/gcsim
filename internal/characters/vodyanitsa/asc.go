@@ -134,7 +134,10 @@ func (c *char) a1Shred(ap info.AttackPattern) {
 // Dirge of the Fandyr (A4): the skill grants 25 Lead Vocal and 10 Chorus stacks for 30s. The
 // active character consumes Lead Vocal, others Chorus, one per damage instance of a Hydro or Cryo
 // normal, charged, plunging attack, skill or burst; while the AlterMark is on, Stellar Swirl
-// damage (one per contributor, the way the engine counts Stellar Swirl contributions) instead.
+// damage instead: one per contributor of a Stellar Swirl reaction, the way the engine counts
+// Stellar Swirl contributions, and one per direct Stellar Swirl hit (Odette's, Sandrone's, the Cryo
+// Traveler's and Vesna's), since the data counts every StarSwirlWindDamage and StarSwirlIceDamage
+// instance.
 // Each adds flat damage: 260 (Stellar Swirl) or 140 (Hydro/Cryo) per 1000 Max HP above 40000,
 // at most 6500 or 3500; nothing at 40000 Max HP or less (Avatar_Vodyanitsa_ElementalArt_Concerto*).
 func (c *char) a4Grant() {
@@ -181,6 +184,17 @@ func (c *char) a4Init() {
 		}
 		c.a4Consume(atk, a4PerKiloSSw, a4MaxSSw)
 	}, "vodyanitsa-a4-stellar-swirl")
+
+	c.Core.Events.Subscribe(event.OnEnemyHit, func(args ...any) {
+		atk := args[1].(*info.AttackEvent)
+		if atk.Info.AttackTag != attacks.AttackTagDirectStellarSwirl {
+			return
+		}
+		if !c.StatusIsActive(alterMarkKey) {
+			return
+		}
+		c.a4Consume(atk, a4PerKiloSSw, a4MaxSSw)
+	}, "vodyanitsa-a4-direct-stellar-swirl")
 }
 
 func (c *char) a4Consume(atk *info.AttackEvent, perKilo, maxDmg float64) {
