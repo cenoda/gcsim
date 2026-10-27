@@ -120,7 +120,7 @@ func (c *char) twirlyAttackInfo(abil string, mult float64) info.AttackInfo {
 		ActorIndex:     c.Index(),
 		Abil:           abil,
 		AttackTag:      attacks.AttackTagElementalArt,
-		AdditionalTags: []attacks.AdditionalTag{attacks.AdditionalTagNightsoul},
+		AdditionalTags: []attacks.AttackTag{attacks.AttackTagNightsoul},
 		ICDTag:         attacks.ICDTagElementalArt,
 		ICDGroup:       attacks.ICDGroupDefault,
 		StrikeType:     attacks.StrikeTypeBlunt,
