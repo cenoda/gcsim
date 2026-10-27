@@ -97,6 +97,7 @@ const (
 	Ineffa                        // ineffa
 	Jahoda                        // jahoda
 	Jean                          // jean
+	Kachina                       // kachina
 	KaedeharaKazuha               // kaedeharakazuha
 	Kaeya                         // kaeya
 	KamisatoAyaka                 // kamisatoayaka
@@ -229,6 +230,7 @@ var _CharNames = [...]string{
 	"ineffa",
 	"jahoda",
 	"jean",
+	"kachina",
 	"kaedeharakazuha",
 	"kaeya",
 	"kamisatoayaka",
@@ -361,6 +363,7 @@ var _CharValues = [...]Char{
 	Ineffa,
 	Jahoda,
 	Jean,
+	Kachina,
 	KaedeharaKazuha,
 	Kaeya,
 	KamisatoAyaka,
