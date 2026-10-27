@@ -25,7 +25,7 @@ func (h *Handler) verdantDewGen() {
 		h.Log.NewEvent("verdant dew generation stopped", glog.LogElementEvent, -1)
 	}
 
-	h.partialDewCount++
+	h.partialDewCount += 1 + h.VerdantDewRateMod()
 	if h.partialDewCount >= maxPartialDew {
 		h.AddVerdantDew()
 		h.partialDewCount = 0
