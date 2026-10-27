@@ -80,6 +80,7 @@ const (
 	OnSpecialReactionAttack // target, AttackEvent; event so predamagemods can be applied to the individual lunar/stellar contributions. Emitted once per contributor
 	OnMoondriftHarmony      // target, AttackEvent;
 	OnStellarVortexDetonate // src char, contribMap, AttackPattern;
+	OnStellarSwirlVortex    // target, vortex (info.Gadget); after each Stellar Swirl, only while Flags.Custom[reactable.WanderingVortexKey] is set
 	// sim stuff
 	OnInitialize  // nil
 	OnStateChange // prev, next, segmented

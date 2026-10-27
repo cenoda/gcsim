@@ -1,0 +1,49 @@
+use: pipeline
+kind: character
+name: vodyanitsa
+
+talents:
+  - attack:
+      - attack(1-Hit DMG)
+      - attack(2-Hit DMG)
+      - attack(3-Hit DMG)
+      - attack(4-Hit DMG)
+  - charge: attack(Charged Attack DMG)
+  - collision: attack(Plunge DMG)
+  - lowPlunge: attack(Low/High Plunge DMG)
+  - highPlunge: attack(Low/High Plunge DMG|1)
+
+  - skill: skill(Skill DMG)
+  - skillDur: skill(Duration)
+  - hornInterval: skill(Horn of Spring's Call Attack Interval)
+  - horn: skill(Horn of Spring's Call DMG)
+  - healFlat: skill(Song of Ages Past Healing) # {} + {} Max HP
+  - healPct: skill(Song of Ages Past Healing|1) # {} + {} Max HP
+  - healInterval: skill(Song of Ages Past Healing Interval)
+  - skillShred: skill(Hydro/Cryo RES Reduction)
+  - skillShredDur: skill(RES Reduction Duration)
+
+  - burst: burst(Skill DMG)
+  - burstBonus: burst(Song of Ages Past DMG Bonus)
+
+docs:
+  fields:
+    .vodyanitsa.song: 1 while Song of Ages Past is active, 0 otherwise.
+    .vodyanitsa.lead-vocal: Lead Vocal stacks left (A4).
+    .vodyanitsa.chorus: Chorus stacks left (A4).
+    .vodyanitsa.wandering: 1 while a Wandering Vortex is on the field or exploded less than 5s ago (A1), 0 otherwise.
+  # frames: no community frame count exists yet, so there is no count/video entry. Normal and
+  # charged attacks use Sucrose's counted frames; the skill (tap, 45 frames, swap at 30) and the
+  # burst (110 frames, hit at 95) are estimated. Every timing inside the kit (first hit at ability
+  # start, horn every 3s hitting 0.2s after it appears, heals from 1.7s every 1.5s, the party buff
+  # every 1s for 2s, the Wandering Vortex check every 0.2s), gauges and ICD come from the game's
+  # ability data (Avatar_Vodyanitsa_ElementalArt, Bullet_Vodyanitsa_ElementalArt,
+  # Avatar_Vodyanitsa_ElementalBurst, ElementAbility_StarSwirl_Ice_Gadget).
+
+abilities:
+  - name: attack
+    params:
+      travel: 'Frames the N1-N3 bullets travel. Default: 10.'
+  - name: charge
+    params:
+      travel: 'Frames the charged attack travels. Default: 10.'

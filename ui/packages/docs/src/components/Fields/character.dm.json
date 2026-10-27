@@ -309,6 +309,24 @@
       "desc": "Number of Void Rifts on the field."
     }
   ],
+  "vodyanitsa": [
+    {
+      "field": ".vodyanitsa.chorus",
+      "desc": "Chorus stacks left (A4)."
+    },
+    {
+      "field": ".vodyanitsa.lead-vocal",
+      "desc": "Lead Vocal stacks left (A4)."
+    },
+    {
+      "field": ".vodyanitsa.song",
+      "desc": "1 while Song of Ages Past is active, 0 otherwise."
+    },
+    {
+      "field": ".vodyanitsa.wandering",
+      "desc": "1 while a Wandering Vortex is on the field or exploded less than 5s ago (A1), 0 otherwise."
+    }
+  ],
   "wanderer": [
     {
       "field": ".wanderer.skydweller-points",

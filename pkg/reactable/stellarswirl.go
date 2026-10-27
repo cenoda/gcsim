@@ -78,6 +78,10 @@ func (r *Reactable) queueStellarSwirl(charIndex int, mod info.ReactionModKey) {
 		vortex = r.newStellarVortex()
 	}
 
+	if _, ok := r.core.Flags.Custom[WanderingVortexKey]; ok {
+		r.core.Events.Emit(event.OnStellarSwirlVortex, r.self, vortex)
+	}
+
 	if r.sswStacks() >= sswMaxStacks {
 		vortex.Kill()
 	}

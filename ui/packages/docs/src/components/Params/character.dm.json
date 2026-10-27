@@ -1996,6 +1996,18 @@
       "desc": "0 for Tap (default), 1 for Hold."
     }
   ],
+  "vodyanitsa": [
+    {
+      "ability": "attack",
+      "param": "travel",
+      "desc": "Frames the N1-N3 bullets travel. Default: 10."
+    },
+    {
+      "ability": "charge",
+      "param": "travel",
+      "desc": "Frames the charged attack travels. Default: 10."
+    }
+  ],
   "wanderer": [
     {
       "ability": "attack",
