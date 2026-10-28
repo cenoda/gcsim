@@ -143,6 +143,7 @@ const (
 	HarbingerOfDawn                               // harbingerofdawn
 	HuntersBow                                    // huntersbow
 	HuntersPath                                   // hunterspath
+	HymnOfTheMaelstrom                            // hymnofthemaelstrom
 	IbisPiercer                                   // ibispiercer
 	IronPoint                                     // ironpoint
 	IronSting                                     // ironsting
@@ -396,6 +397,7 @@ var _WeaponNames = [...]string{
 	"harbingerofdawn",
 	"huntersbow",
 	"hunterspath",
+	"hymnofthemaelstrom",
 	"ibispiercer",
 	"ironpoint",
 	"ironsting",
@@ -649,6 +651,7 @@ var _WeaponValues = [...]Weapon{
 	HarbingerOfDawn,
 	HuntersBow,
 	HuntersPath,
+	HymnOfTheMaelstrom,
 	IbisPiercer,
 	IronPoint,
 	IronSting,

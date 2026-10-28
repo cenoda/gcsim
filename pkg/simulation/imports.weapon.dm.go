@@ -74,6 +74,7 @@ import (
 	_ "github.com/genshinsim/gcsim/internal/weapons/catalyst/frostbearer"
 	_ "github.com/genshinsim/gcsim/internal/weapons/catalyst/fruitoffulfillment"
 	_ "github.com/genshinsim/gcsim/internal/weapons/catalyst/hakushin"
+	_ "github.com/genshinsim/gcsim/internal/weapons/catalyst/hymnofthemaelstrom"
 	_ "github.com/genshinsim/gcsim/internal/weapons/catalyst/jadefallssplendor"
 	_ "github.com/genshinsim/gcsim/internal/weapons/catalyst/kagura"
 	_ "github.com/genshinsim/gcsim/internal/weapons/catalyst/magicguide"

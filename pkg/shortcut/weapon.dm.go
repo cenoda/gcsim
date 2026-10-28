@@ -176,6 +176,8 @@ var WeaponNameToKey = map[string]keys.Weapon{
 	"harbinger":                       keys.HarbingerOfDawn,
 	"huntersbow":                      keys.HuntersBow,
 	"hunterspath":                     keys.HuntersPath,
+	"hymnofthemaelstrom":              keys.HymnOfTheMaelstrom,
+	"hymn":                            keys.HymnOfTheMaelstrom,
 	"ibispiercer":                     keys.IbisPiercer,
 	"ibis":                            keys.IbisPiercer,
 	"ironpoint":                       keys.IronPoint,
