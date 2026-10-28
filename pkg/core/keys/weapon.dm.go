@@ -141,6 +141,7 @@ const (
 	Hamayumi                                      // hamayumi
 	HaranGeppakuFutsu                             // harangeppakufutsu
 	HarbingerOfDawn                               // harbingerofdawn
+	HereticsMoltenBlade                           // hereticsmoltenblade
 	HuntersBow                                    // huntersbow
 	HuntersPath                                   // hunterspath
 	HymnOfTheMaelstrom                            // hymnofthemaelstrom
@@ -177,6 +178,7 @@ const (
 	MoonweaversDawn                               // moonweaversdawn
 	MountainBracingBolt                           // mountainbracingbolt
 	MouunsMoon                                    // mouunsmoon
+	NewBough                                      // newbough
 	NightweaversLookingGlass                      // nightweaverslookingglass
 	NocturnesCurtainCall                          // nocturnescurtaincall
 	OathswornEye                                  // oathsworneye
@@ -289,6 +291,7 @@ const (
 	WhiteTassel                                   // whitetassel
 	WindblumeOde                                  // windblumeode
 	WineAndSong                                   // wineandsong
+	WintersHeavyHeart                             // wintersheavyheart
 	WolfFang                                      // wolffang
 	WolfsGravestone                               // wolfsgravestone
 	XiphosMoonlight                               // xiphosmoonlight
@@ -395,6 +398,7 @@ var _WeaponNames = [...]string{
 	"hamayumi",
 	"harangeppakufutsu",
 	"harbingerofdawn",
+	"hereticsmoltenblade",
 	"huntersbow",
 	"hunterspath",
 	"hymnofthemaelstrom",
@@ -431,6 +435,7 @@ var _WeaponNames = [...]string{
 	"moonweaversdawn",
 	"mountainbracingbolt",
 	"mouunsmoon",
+	"newbough",
 	"nightweaverslookingglass",
 	"nocturnescurtaincall",
 	"oathsworneye",
@@ -543,6 +548,7 @@ var _WeaponNames = [...]string{
 	"whitetassel",
 	"windblumeode",
 	"wineandsong",
+	"wintersheavyheart",
 	"wolffang",
 	"wolfsgravestone",
 	"xiphosmoonlight",
@@ -649,6 +655,7 @@ var _WeaponValues = [...]Weapon{
 	Hamayumi,
 	HaranGeppakuFutsu,
 	HarbingerOfDawn,
+	HereticsMoltenBlade,
 	HuntersBow,
 	HuntersPath,
 	HymnOfTheMaelstrom,
@@ -685,6 +692,7 @@ var _WeaponValues = [...]Weapon{
 	MoonweaversDawn,
 	MountainBracingBolt,
 	MouunsMoon,
+	NewBough,
 	NightweaversLookingGlass,
 	NocturnesCurtainCall,
 	OathswornEye,
@@ -797,6 +805,7 @@ var _WeaponValues = [...]Weapon{
 	WhiteTassel,
 	WindblumeOde,
 	WineAndSong,
+	WintersHeavyHeart,
 	WolfFang,
 	WolfsGravestone,
 	XiphosMoonlight,
