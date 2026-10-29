@@ -23,8 +23,8 @@ func init() {
 	chargeFrames[action.ActionSwap] = chargeHitmark
 }
 
-// Charged Attack: tramples opponents in front of her; Anemo DMG and a wind pinion in Armed for
-// Action.
+// Charged Attack: tramples opponents in front of her; Anemo DMG and two wind pinions in Armed
+// for Action.
 func (c *char) ChargeAttack(p map[string]int) (action.Info, error) {
 	ai := info.AttackInfo{
 		ActorIndex:       c.Index(),
@@ -46,6 +46,7 @@ func (c *char) ChargeAttack(p map[string]int) (action.Info, error) {
 	ap := combat.NewCircleHitOnTarget(c.Core.Combat.Player(), info.Point{Y: 0.57}, 3)
 	c.QueueCharTask(func() {
 		c.Core.QueueAttack(ai, ap, 0, 0)
+		c.pinion("Wind Pinion (Charge)")
 		c.pinion("Wind Pinion (Charge)")
 	}, chargeHitmark)
 

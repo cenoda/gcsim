@@ -323,7 +323,8 @@ func (c *char) spiritBlade(abil string, star bool, mult, multSSw float64, ap inf
 	c.Core.QueueAttack(ai, ap, 0, 0, c.particleCB)
 }
 
-// The wind pinion: summoned with every Normal, Charged and Plunging Attack in Armed for Action;
+// The wind pinion: summoned with every Normal, Charged and Plunging Attack in Armed for Action
+// (two with N3, N6, Charged and Plunging Attacks, one with the others);
 // it regenerates 5 Sword Essence when summoned and deals Anemo DMG (never Stellar Swirl DMG: the
 // Radiance bullet SkillObj_Vesna_MagicSword_Small_Star runs the same ability).
 func (c *char) pinion(abil string) {

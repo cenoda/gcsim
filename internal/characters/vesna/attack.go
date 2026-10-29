@@ -18,6 +18,8 @@ var (
 	attackHitmarks = [][]int{{12}, {12}, {10, 21}, {15}, {14}, {21}}
 	// hit lag (Avatar_Girl_Sword_Vesna_AniEvent_Attack)
 	attackHitlagHaltFrame = [][]float64{{0.05}, {0.05}, {0.03, 0.03}, {0.02}, {0.03}, {0.08}}
+	// wind pinions summoned with each attack: two with N3 and N6, one with the others
+	attackPinions = []int{1, 1, 2, 1, 1, 2}
 	// hitboxes: boxes [width, length] for N1, N3 and N6, circles otherwise
 	attackHitboxes = [][]float64{{2.26, 5.43}, {2.4}, {2.26, 5.43}, {3}, {2.8}, {6, 5}}
 	attackOffsets  = []info.Point{{Y: -1}, {Y: 0.98}, {Y: -1.53}, {Y: 0.2}, {Y: 0.5}, {X: -0.43, Y: -0.76}}
@@ -46,7 +48,7 @@ func init() {
 }
 
 // Normal Attack: up to 6 strikes. In Armed for Action they deal Anemo DMG that no other infusion
-// overrides, and every hit summons a wind pinion.
+// overrides, and every attack summons wind pinions (N3 and N6 two, the others one).
 func (c *char) Attack(p map[string]int) (action.Info, error) {
 	if c.StatusIsActive(c6TransposeKey) {
 		return c.transpose(p)
@@ -80,9 +82,11 @@ func (c *char) Attack(p map[string]int) (action.Info, error) {
 		first := i == 0
 		c.QueueCharTask(func() {
 			c.Core.QueueAttack(ai, ap, 0, 0)
-			// one wind pinion per attack, with its first hit
+			// the attack's wind pinions, with its first hit
 			if first {
-				c.pinion(fmt.Sprintf("Wind Pinion (N%v)", n+1))
+				for range attackPinions[n] {
+					c.pinion(fmt.Sprintf("Wind Pinion (N%v)", n+1))
+				}
 			}
 		}, attackHitmarks[n][i])
 	}
