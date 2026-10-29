@@ -243,6 +243,10 @@ func (c *char) c2RevelationNAMult() float64 {
 		return 0
 	}
 
+	if c.a4Stack < 5 {
+		return 0
+	}
+
 	if !c.skillBuffActive() {
 		return 0
 	}
@@ -264,6 +268,10 @@ func (c *char) c2RevelationCAMult() float64 {
 	}
 
 	if c.Base.Ascension < 4 {
+		return 0
+	}
+
+	if c.a4Stack < 5 {
 		return 0
 	}
 
